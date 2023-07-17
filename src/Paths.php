@@ -4,8 +4,9 @@ namespace Chinmay\OpenApi;
 
 use Illuminate\Contracts\Support\Jsonable;
 use Illuminate\Support\Collection;
+use JsonSerializable;
 
-class Paths implements Jsonable
+class Paths implements JsonSerializable
 {
     protected Collection $paths;
 
@@ -20,8 +21,8 @@ class Paths implements Jsonable
         return $this;
     }
 
-    public function toJson($options = 0): string
+    public function jsonSerialize(): string
     {
-        return $this->paths->toJson($options);
+       return json_encode($this->paths);
     }
 }
