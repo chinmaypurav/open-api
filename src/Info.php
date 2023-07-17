@@ -17,7 +17,7 @@ class Info
     public function __construct(string $title, string $version)
     {
         $this->title = $title;
-        $this->$version = $version;
+        $this->version = $version;
     }
 
     /**
