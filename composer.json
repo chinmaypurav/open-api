@@ -1,0 +1,21 @@
+{
+    "name": "chinmay/open-api",
+    "description": "Open API Schema Generator",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Chinmay\\OpenApi\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Chinmay Purav",
+            "email": "chinpurav@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "illuminate/support": "^9.0|^10.0"
+    }
+}
