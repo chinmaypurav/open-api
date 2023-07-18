@@ -37,6 +37,11 @@ class OpenApi implements Jsonable
     public SecurityRequirement $security;
 
     /**
+     * @var array [Tag]
+     */
+    public array $tag;
+
+    /**
      * @var ExternalDocumentation
      */
     public ExternalDocumentation $externalDocs;
@@ -98,6 +103,16 @@ class OpenApi implements Jsonable
     public function setSecurity(SecurityRequirement $security): OpenApi
     {
         $this->security = $security;
+        return $this;
+    }
+
+    /**
+     * @param array $tag
+     * @return OpenApi
+     */
+    public function setTag(array $tag): OpenApi
+    {
+        $this->tag = $tag;
         return $this;
     }
 
