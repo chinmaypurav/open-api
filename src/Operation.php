@@ -26,7 +26,10 @@ class Operation
      */
     public string $operationId;
 
-    public Parameter $parameter;
+    /**
+     * @var array [Parameter]
+     */
+    public array $parameters;
 
     public Responses $responses;
 
@@ -87,12 +90,12 @@ class Operation
     }
 
     /**
-     * @param Parameter $parameter
+     * @param array $parameters
      * @return Operation
      */
-    public function setParameter(Parameter $parameter): Operation
+    public function setParameter(array $parameters): Operation
     {
-        $this->parameter = $parameter;
+        $this->parameters = $parameters;
         return $this;
     }
 
