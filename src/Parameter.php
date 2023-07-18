@@ -16,10 +16,22 @@ class Parameter
 
     public bool $allowEmptyValue;
 
+    public Schema $schema;
+
     public function __construct(string $name, string $in)
     {
         $this->name = $name;
         $this->in = $in;
         $this->required = $in === 'path';
+    }
+
+    /**
+     * @param Schema $schema
+     * @return Parameter
+     */
+    public function setSchema(Schema $schema): Parameter
+    {
+        $this->schema = $schema;
+        return $this;
     }
 }
