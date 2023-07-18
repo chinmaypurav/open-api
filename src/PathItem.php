@@ -77,83 +77,9 @@ class PathItem
         return $this;
     }
 
-    /**
-     * @param Operation $get
-     * @return PathItem
-     */
-    public function setGet(Operation $get): PathItem
+    public function setOperation(string $type, Operation $operation): PathItem
     {
-        $this->get = $get;
-        return $this;
-    }
-
-    /**
-     * @param Operation $put
-     * @return PathItem
-     */
-    public function setPut(Operation $put): PathItem
-    {
-        $this->put = $put;
-        return $this;
-    }
-
-    /**
-     * @param Operation $post
-     * @return PathItem
-     */
-    public function setPost(Operation $post): PathItem
-    {
-        $this->post = $post;
-        return $this;
-    }
-
-    /**
-     * @param Operation $delete
-     * @return PathItem
-     */
-    public function setDelete(Operation $delete): PathItem
-    {
-        $this->delete = $delete;
-        return $this;
-    }
-
-    /**
-     * @param Operation $options
-     * @return PathItem
-     */
-    public function setOptions(Operation $options): PathItem
-    {
-        $this->options = $options;
-        return $this;
-    }
-
-    /**
-     * @param Operation $head
-     * @return PathItem
-     */
-    public function setHead(Operation $head): PathItem
-    {
-        $this->head = $head;
-        return $this;
-    }
-
-    /**
-     * @param Operation $patch
-     * @return PathItem
-     */
-    public function setPatch(Operation $patch): PathItem
-    {
-        $this->patch = $patch;
-        return $this;
-    }
-
-    /**
-     * @param Operation $trace
-     * @return PathItem
-     */
-    public function setTrace(Operation $trace): PathItem
-    {
-        $this->trace = $trace;
+        $this->{$type} = $operation;
         return $this;
     }
 
