@@ -26,6 +26,8 @@ class Operation
      */
     public string $operationId;
 
+    public Parameter $parameter;
+
     public bool $deprecated = false;
 
     public SecurityRequirement $security;
@@ -81,6 +83,17 @@ class Operation
         $this->operationId = $operationId;
         return $this;
     }
+
+    /**
+     * @param Parameter $parameter
+     * @return Operation
+     */
+    public function setParameter(Parameter $parameter): Operation
+    {
+        $this->parameter = $parameter;
+        return $this;
+    }
+
 
     /**
      * @param bool $deprecated
