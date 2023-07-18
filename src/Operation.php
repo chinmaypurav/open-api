@@ -93,7 +93,7 @@ class Operation
      * @param array $parameters
      * @return Operation
      */
-    public function setParameter(array $parameters): Operation
+    public function setParameters(array $parameters): Operation
     {
         $this->parameters = $parameters;
         return $this;
