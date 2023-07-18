@@ -3,8 +3,9 @@
 namespace Chinmay\OpenApi;
 
 use Illuminate\Support\Collection;
+use JsonSerializable;
 
-class Responses
+class Responses implements JsonSerializable
 {
     public Collection $resource;
 
@@ -22,5 +23,10 @@ class Responses
     public function putDefault(Response $response): Responses
     {
         return $this->put('default', $response);
+    }
+
+    public function jsonSerialize(): array
+    {
+        return $this->resource->toArray();
     }
 }
