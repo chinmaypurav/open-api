@@ -21,8 +21,8 @@ class Paths implements JsonSerializable
         return $this;
     }
 
-    public function jsonSerialize(): string
+    public function jsonSerialize(): array
     {
-       return json_encode($this->paths);
+       return $this->paths->toArray();
     }
 }
