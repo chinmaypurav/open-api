@@ -28,6 +28,8 @@ class Operation
 
     public Parameter $parameter;
 
+    public Responses $responses;
+
     public bool $deprecated = false;
 
     public SecurityRequirement $security;
@@ -94,6 +96,15 @@ class Operation
         return $this;
     }
 
+    /**
+     * @param Responses $responses
+     * @return Operation
+     */
+    public function setResponses(Responses $responses): Operation
+    {
+        $this->responses = $responses;
+        return $this;
+    }
 
     /**
      * @param bool $deprecated
