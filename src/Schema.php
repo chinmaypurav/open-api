@@ -10,6 +10,10 @@ class Schema
 
     public string $items;
 
+    public array $required;
+
+    public array $properties;
+
     public function __construct(string $type)
     {
         $this->type = $type;
@@ -30,4 +34,26 @@ class Schema
         $this->format = $format;
         return $this;
     }
+
+    /**
+     * @param array $required
+     * @return Schema
+     */
+    public function setRequired(array $required): Schema
+    {
+        $this->required = $required;
+        return $this;
+    }
+
+    /**
+     * @param array $properties
+     * @return Schema
+     */
+    public function setProperties(array $properties): Schema
+    {
+        $this->properties = $properties;
+        return $this;
+    }
+
+
 }
