@@ -6,6 +6,8 @@ class Schema
 {
     public string $type;
 
+    public string $format;
+
     public string $items;
 
     public function __construct(string $type)
@@ -20,6 +22,12 @@ class Schema
     public function setItems(string $items): Schema
     {
         $this->items = $items;
+        return $this;
+    }
+
+    public function setFormat(string $format): Schema
+    {
+        $this->format = $format;
         return $this;
     }
 }
