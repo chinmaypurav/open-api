@@ -31,6 +31,8 @@ class Operation
      */
     public array $parameters;
 
+    public RequestBody $requestBody;
+
     public Responses $responses;
 
     public bool $deprecated = false;
@@ -96,6 +98,16 @@ class Operation
     public function setParameters(array $parameters): Operation
     {
         $this->parameters = $parameters;
+        return $this;
+    }
+
+    /**
+     * @param RequestBody $requestBody
+     * @return Operation
+     */
+    public function setRequestBody(RequestBody $requestBody): Operation
+    {
+        $this->requestBody = $requestBody;
         return $this;
     }
 
