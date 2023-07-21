@@ -12,6 +12,10 @@ class Info
 
     public string $termsOfService;
 
+    public Contact $contact;
+
+    public License $license;
+
     public string $version;
 
     public function __construct(string $title, string $version)
@@ -57,6 +61,26 @@ class Info
     public function setTermsOfService(string $termsOfService): Info
     {
         $this->termsOfService = $termsOfService;
+        return $this;
+    }
+
+    /**
+     * @param Contact $contact
+     * @return Info
+     */
+    public function setContact(Contact $contact): Info
+    {
+        $this->contact = $contact;
+        return $this;
+    }
+
+    /**
+     * @param License $license
+     * @return Info
+     */
+    public function setLicense(License $license): Info
+    {
+        $this->license = $license;
         return $this;
     }
 
