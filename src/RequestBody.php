@@ -6,18 +6,12 @@ class RequestBody
 {
     public string $description;
 
-    public array $content;
+    public string|MediaType $content;
 
     public bool $required = false;
 
-    public function __construct(array $content = [])
+    public function __construct(string|MediaType $mediaType)
     {
-        $this->content = $content;
-    }
-
-    public function putContent(MediaType $mediaType): RequestBody
-    {
-        $this->content[] = $mediaType;
-        return $this;
+        $this->content = $mediaType;
     }
 }
