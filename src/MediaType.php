@@ -10,11 +10,11 @@ class MediaType implements JsonSerializable
 
     public Schema $schema;
 
-    public mixed $example;
+    public mixed $example = null;
 
-    public array $examples;
+    public array $examples = [];
 
-    public array $encoding;
+    public array $encoding = [];
 
     public function __construct(string $key = 'application/json')
     {
