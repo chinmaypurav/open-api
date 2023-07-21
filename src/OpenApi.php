@@ -9,7 +9,7 @@ class OpenApi implements Jsonable
     /**
      * @var string
      */
-    public string $openapi = '3.1.0';
+    public string $openapi = '3.0.0';
 
     /**
      * @var Info
