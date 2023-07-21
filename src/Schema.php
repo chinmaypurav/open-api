@@ -45,6 +45,12 @@ class Schema
         return $this;
     }
 
+    public function putRequired(mixed $required): Schema
+    {
+        $this->required[] = $required;
+        return $this;
+    }
+
     /**
      * @param array $properties
      * @return Schema
@@ -54,6 +60,4 @@ class Schema
         $this->properties = $properties;
         return $this;
     }
-
-
 }
