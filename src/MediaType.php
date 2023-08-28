@@ -16,7 +16,7 @@ class MediaType implements JsonSerializable
 
     public array $encoding = [];
 
-    public function __construct(string $key = 'application/json')
+    public function __construct(string $key = 'application/x-www-form-urlencoded')
     {
         $this->key = $key;
     }
